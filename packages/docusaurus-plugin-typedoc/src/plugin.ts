@@ -32,7 +32,11 @@ export default function pluginDocusaurus(
         .action(async () => {
           context.siteConfig?.plugins.forEach((pluginConfig) => {
             // Check PluginConfig is typed to [string, PluginOptions]
-            if (pluginConfig && typeof pluginConfig[1] === 'object' && pluginConfig[0] === PLUGIN_NAME) {
+            if (
+              pluginConfig &&
+              typeof pluginConfig[1] === 'object' &&
+              pluginConfig[0].includes(PLUGIN_NAME)
+            ) {
               generateTypedoc(context, pluginConfig[1]);
             }
           });

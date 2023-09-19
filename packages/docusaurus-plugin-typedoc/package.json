@@ -1,6 +1,6 @@
 {
   "name": "@spalladino/docusaurus-plugin-typedoc",
-  "version": "0.20.2",
+  "version": "0.20.3",
   "description": "A Docusaurus v2 plugin to build API documentation with TypeDoc.",
   "main": "dist/index.js",
   "files": [
